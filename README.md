@@ -14,6 +14,7 @@
 ### Loss Function
 >產出預測值與實際值的差距, 必須設定Loss Function, 再利用偏微分上市進行梯度降階, 得到最佳化參數。
 >
+
 ```python=
 # cross entropy error 
 def cross_entropy_error(y, t):
@@ -32,6 +33,7 @@ def cross_entropy_error(y, t):
 ### Gradient Descent
 >計算出每一個參數(類神經網路的每一個 W and b )的對於Loss Function的偏微分值, 為了對參數進行梯度調整, 得到更小的loss。
 >
+
 ```python=
 # 計算數值的梯度, 亦即微分最基本定義
 def _numerical_gradient_no_batch(f, x):
@@ -71,6 +73,7 @@ def numerical_gradient(f, X):
 ### 使用 MNIST 資料及進行學習
 >建立兩層的類神經網路來學習參數
 >
+
 ```python=
 # 計算數值的梯度, 亦即微分最基本定義
 coding: utf-8
@@ -142,6 +145,7 @@ plt.show()
 ### Backpropagation Function
 > 下方為Backpropagation的code, 不同於數值降階, 經過推倒後Backpropagation將回比先前的方法來得快速許多。
 >
+
 ```python=
 # coding: utf-8
 import sys, os
@@ -203,6 +207,7 @@ class TwoLayerNet:
 ### 使用 MNIST 資料及進行學習
 >建立兩層的類神經網路來學習參數
 >
+
 ```python=
 
 import sys, os
@@ -252,6 +257,7 @@ for i in range(iters_num):
         print(train_acc, test_acc)
 
  ```
+ 
 > 因為只有改演算法, 是執行速度上的問題, 執行結果不會變。
 > 
 
@@ -259,7 +265,6 @@ for i in range(iters_num):
  
  
 ## 不同的optimizer
-### 
 >測試以下四種不同的梯度降階方法
 >程式碼放置optimizer中的optimizer_compare_mnist.py
 >
